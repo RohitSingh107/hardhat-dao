@@ -21,7 +21,7 @@ module.exports = async (hre: HardhatRuntimeEnvironment) => {
   const timeLock: TimeLock = await ethers.getContract("TimeLock");
 
   log("-------------------------------------------");
-  log("Setting up roles...`");
+  log("Setting up roles...");
   const proposerRole = await timeLock.PROPOSER_ROLE();
   const executorRole = await timeLock.EXECUTOR_ROLE();
   const adminRole = await timeLock.TIMELOCK_ADMIN_ROLE();
@@ -53,9 +53,6 @@ module.exports = async (hre: HardhatRuntimeEnvironment) => {
   //     log("Verifying...");
   //     await verify(governanceToken.address, []);
   //   }
-  console.log(
-    `Deployed Governor Contract to address: ${governorContract.address}`
-  );
 
   log("-----------------------------------------");
 };

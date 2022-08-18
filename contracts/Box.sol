@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Box {
+contract Box is Ownable {
     uint256 internal value;
 
     event ValueChanged(uint256 newValue);
